@@ -1,0 +1,4 @@
+Usa siempre la terminal para ejecutar comandos reales.
+Ya tengo instalados: Node.js, Docker, Fly.io y Supabase.
+No intentes instalar nada nuevo.
+Para desplegar usa 'fly deploy'.
