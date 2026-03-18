@@ -10,13 +10,13 @@ const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 // Esta es la ruta para chatear
 app.post('/chat', async (req, res) => {
   const { pregunta } = req.body;
-  
+
   if (!pregunta) {
     return res.status(400).json({ error: "Debes enviar una pregunta" });
   }
 
   try {
-    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash-latest" });
     const result = await model.generateContent(pregunta);
     const response = await result.response;
     res.json({ respuesta: response.text() });
